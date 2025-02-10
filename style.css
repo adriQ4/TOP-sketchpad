@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 960px;
+  height: 960px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: gray;
+}
