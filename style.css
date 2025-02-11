@@ -16,5 +16,7 @@ body {
   width: 960px;
   height: 960px;
   flex-wrap: wrap;
-  background-color: gray;
+  background-color: #cccccc;
+  justify-content: center;
+  align-content: space-around;
 }
