@@ -1,5 +1,8 @@
 const $container = document.querySelector(".container");
-let gridSize = 16;
+
+gridContainer(16);
+
+//! Create the table to standard size so that the user can later modify it
 
 function gridContainer(size) {
   const totalGrids = size * size;
@@ -12,19 +15,22 @@ function gridContainer(size) {
     createGrid.style.width = `${containerSize}px`;
     createGrid.style.height = `${containerSize}px`;
 
-    // Mouse hover effect
+    //! Mouse hover effect
     createGrid.addEventListener("mouseover", (e) => {
       let randomColor = Math.floor(Math.random() * 16777215).toString(16);
       e.target.style.backgroundColor = `#${randomColor}`;
     });
-    // createGrid.addEventListener("mouseout", () => {
-    //   createGrid.style.backgroundColor = "#cccccc";
-    // });
+
+    //? Created an event to restore the color
+    createGrid.addEventListener("click", (e) => {
+      e.target.style.backgroundColor = "#cccccc";
+    });
+
     $container.appendChild(createGrid);
   }
 }
-gridContainer(16);
 
+//* Make  measures button
 const btnSize = document.createElement("button");
 btnSize.textContent = "Choice another size";
 $container.appendChild(btnSize);
